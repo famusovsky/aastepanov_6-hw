@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3F03149528ED8830000A34CC"
+               BuildableName = "aastepanov_6 HW2.app"
+               BlueprintName = "aastepanov_6 HW2"
+               ReferencedContainer = "container:aastepanov_6 HW2.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3F03149528ED8830000A34CC"
+            BuildableName = "aastepanov_6 HW2.app"
+            BlueprintName = "aastepanov_6 HW2"
+            ReferencedContainer = "container:aastepanov_6 HW2.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>
