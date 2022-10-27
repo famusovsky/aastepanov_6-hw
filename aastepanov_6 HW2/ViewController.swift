@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ObserverProtocol {
+    private let colorPaletteView = ColorPaletteView()
     private let commentLabel = UILabel()
     private let valueLabel = UILabel()
     private let incrementButton = UIButton(type: .system)
+    private var buttonsSV = UIStackView()
     private var value: Int = 0
 
     override func viewDidLoad() {
@@ -21,10 +23,13 @@ class ViewController: UIViewController {
 
     private func setupView() {
         view.backgroundColor = .systemGray6
+        colorPaletteView.isHidden = true
         setupIncrementButton()
         setupValueLabel()
         setupCommentView()
         setupMenuButtons()
+        setupColorPalette()
+        colorPaletteView.delegate = self
     }
 
     private func setupIncrementButton() {
@@ -114,18 +119,18 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 12
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
         button.backgroundColor = .white
-        button.heightAnchor.constraint(equalTo:
-        button.widthAnchor).isActive = true
+        button.heightAnchor.constraint(equalTo:button.widthAnchor).isActive = true
         applyShadow(button)
         return button
     }
 
     private func setupMenuButtons() {
         let colorsButton = makeMenuButton(title: "🎨")
+        colorsButton.addTarget(self, action:#selector(paletteButtonPressed), for: .touchUpInside)
         let notesButton = makeMenuButton(title: "🗒️")
         let newsButton = makeMenuButton(title: "📰")
 
-        let buttonsSV = UIStackView(arrangedSubviews: [colorsButton, notesButton, newsButton])
+        buttonsSV = UIStackView(arrangedSubviews: [colorsButton, notesButton, newsButton])
         buttonsSV.spacing = 12
         buttonsSV.axis = .horizontal
         buttonsSV.distribution = .fillEqually
@@ -133,6 +138,13 @@ class ViewController: UIViewController {
         view.addSubview(buttonsSV)
         buttonsSV.pin(to: view, [.left, .right], 24)
         buttonsSV.pinBottom(to: view, 48)
+    }
+    
+    @objc
+    private func paletteButtonPressed() {
+        colorPaletteView.isHidden.toggle()
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 
     private func applyShadow(_ button: UIButton) {
@@ -142,5 +154,19 @@ class ViewController: UIViewController {
         button.layer.shadowRadius = 10.0
         button.layer.masksToBounds = false
     }
+    
+    private func setupColorPalette() {
+        colorPaletteView.isHidden = true
+        view.addSubview(colorPaletteView)
+        colorPaletteView.translatesAutoresizingMaskIntoConstraints = false
+        colorPaletteView.pinTop(to: incrementButton, 54)
+        colorPaletteView.pinBottom(to: buttonsSV, Int(view.frame.width - 72) / 3 + 6)
+        colorPaletteView.pin(to: view, [.left, .right], 24)
+    }
+    
+    func howColorChanged(_ palette: ColorPaletteView) {
+        UIView.animate(withDuration: 0.5) {
+            self.view.backgroundColor = palette.chosenColor
+        }
+    }
 }
-

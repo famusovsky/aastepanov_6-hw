@@ -5,7 +5,7 @@ extension UIView {
         case top, bottom, left, right
     }
 
-    func pin(to superview: UIView, _ sides: [PinSide], _ const: Int = 0) {
+    func pin(to superview: UIView, _ sides: [PinSide] = [.top, .bottom, .left, .right], _ const: Int = 0) {
         for side in sides {
             switch side {
             case .top:
