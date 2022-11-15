@@ -11,6 +11,10 @@
 		3F03149C28ED8830000A34CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03149B28ED8830000A34CC /* SceneDelegate.swift */; };
 		3F03149E28ED8830000A34CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F03149D28ED8830000A34CC /* ViewController.swift */; };
 		3F0314A328ED8831000A34CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0314A228ED8831000A34CC /* Assets.xcassets */; };
+		3F72C4BB2923F27D00C33B8A /* ShortNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C4BA2923F27D00C33B8A /* ShortNote.swift */; };
+		3F72C4BD2923F2A900C33B8A /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C4BC2923F2A900C33B8A /* NoteCell.swift */; };
+		3F72C4BF2923FAC400C33B8A /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C4BE2923FAC400C33B8A /* NotesViewController.swift */; };
+		3F72C4C12923FD1A00C33B8A /* AddNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F72C4C02923FD1A00C33B8A /* AddNoteCell.swift */; };
 		3FB5F1E1290B0D2F00785875 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5F1E0290B0D2F00785875 /* Protocols.swift */; };
 		3FB5F1E5290B2DAF00785875 /* ColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5F1E4290B2DAF00785875 /* ColorPaletteView.swift */; };
 		D317CF6E68E85AFF02418EC2 /* UIView_Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D317CFE3FEBAA1893AA700AF /* UIView_Pin.swift */; };
@@ -23,6 +27,10 @@
 		3F03149D28ED8830000A34CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F0314A228ED8831000A34CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0314A728ED8831000A34CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F72C4BA2923F27D00C33B8A /* ShortNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortNote.swift; sourceTree = "<group>"; };
+		3F72C4BC2923F2A900C33B8A /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		3F72C4BE2923FAC400C33B8A /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		3F72C4C02923FD1A00C33B8A /* AddNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteCell.swift; sourceTree = "<group>"; };
 		3FB5F1E0290B0D2F00785875 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3FB5F1E4290B2DAF00785875 /* ColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPaletteView.swift; sourceTree = "<group>"; };
 		D317CFE3FEBAA1893AA700AF /* UIView_Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Pin.swift; sourceTree = "<group>"; };
@@ -66,6 +74,10 @@
 				D317CFE3FEBAA1893AA700AF /* UIView_Pin.swift */,
 				3FB5F1E0290B0D2F00785875 /* Protocols.swift */,
 				3FB5F1E4290B2DAF00785875 /* ColorPaletteView.swift */,
+				3F72C4BA2923F27D00C33B8A /* ShortNote.swift */,
+				3F72C4BC2923F2A900C33B8A /* NoteCell.swift */,
+				3F72C4BE2923FAC400C33B8A /* NotesViewController.swift */,
+				3F72C4C02923FD1A00C33B8A /* AddNoteCell.swift */,
 			);
 			path = "aastepanov_6 HW2";
 			sourceTree = "<group>";
@@ -140,11 +152,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F03149E28ED8830000A34CC /* ViewController.swift in Sources */,
+				3F72C4BB2923F27D00C33B8A /* ShortNote.swift in Sources */,
 				3F03149A28ED8830000A34CC /* AppDelegate.swift in Sources */,
 				3FB5F1E1290B0D2F00785875 /* Protocols.swift in Sources */,
 				3F03149C28ED8830000A34CC /* SceneDelegate.swift in Sources */,
+				3F72C4C12923FD1A00C33B8A /* AddNoteCell.swift in Sources */,
+				3F72C4BF2923FAC400C33B8A /* NotesViewController.swift in Sources */,
 				3FB5F1E5290B2DAF00785875 /* ColorPaletteView.swift in Sources */,
 				D317CF6E68E85AFF02418EC2 /* UIView_Pin.swift in Sources */,
+				3F72C4BD2923F2A900C33B8A /* NoteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

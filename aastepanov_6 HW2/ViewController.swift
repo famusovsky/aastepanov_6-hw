@@ -128,6 +128,7 @@ class ViewController: UIViewController, ObserverProtocol {
         let colorsButton = makeMenuButton(title: "🎨")
         colorsButton.addTarget(self, action:#selector(paletteButtonPressed), for: .touchUpInside)
         let notesButton = makeMenuButton(title: "🗒️")
+        notesButton.addTarget(self, action: #selector(notesButtonPressed), for: .touchUpInside)
         let newsButton = makeMenuButton(title: "📰")
 
         buttonsSV = UIStackView(arrangedSubviews: [colorsButton, notesButton, newsButton])
@@ -143,6 +144,12 @@ class ViewController: UIViewController, ObserverProtocol {
     @objc
     private func paletteButtonPressed() {
         colorPaletteView.isHidden.toggle()
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+    
+    @objc
+    private func notesButtonPressed() {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }

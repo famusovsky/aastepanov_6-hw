@@ -10,3 +10,7 @@ import UIKit
 protocol ObserverProtocol: AnyObject {
     func howColorChanged(_ palette: ColorPaletteView)
 }
+
+protocol AddNoteDelegate: AnyObject {
+    func newNoteAdded(note: ShortNote)
+}
