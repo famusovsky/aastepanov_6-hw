@@ -9,7 +9,7 @@ import UIKit
 
 final class AddNoteCell: UITableViewCell {
     static let reuseIdentifier = "AddNoteCell"
-    public var delegate: Any?
+    public var delegate: NotesStackProtocol?
     private var textView = UITextView()
     public var addButton = UIButton()
     
@@ -43,8 +43,8 @@ final class AddNoteCell: UITableViewCell {
         addButton.layer.cornerRadius = 8
         addButton.setHeight(44)
         addButton.addTarget(self, action: #selector(addButtonTapped(_:)), for: .touchUpInside)
-        addButton.isEnabled = false
         addButton.alpha = 0.5
+        addButton.isEnabled = true
         
         let stackView = UIStackView(arrangedSubviews: [textView, addButton])
         stackView.axis = .vertical
@@ -58,6 +58,9 @@ final class AddNoteCell: UITableViewCell {
     
     @objc
     private func addButtonTapped(_ sender: UIButton) {
-        
+        if (!textView.text.isEmpty) {
+            delegate?.addNewNote(note: ShortNote(text: textView.text))
+            textView.text = ""
+        }
     }
 }

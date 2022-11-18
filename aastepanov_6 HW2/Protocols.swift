@@ -11,6 +11,6 @@ protocol ObserverProtocol: AnyObject {
     func howColorChanged(_ palette: ColorPaletteView)
 }
 
-protocol AddNoteDelegate: AnyObject {
-    func newNoteAdded(note: ShortNote)
+protocol NotesStackProtocol: AnyObject {
+    func addNewNote(note: ShortNote)
 }

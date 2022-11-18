@@ -22,27 +22,33 @@ final class NotesViewController: UIViewController {
     }
     
     private func setupView() {
+        setupTableView()
         setupNavBar()
     }
     
     private func setupTableView() {
-        tableView.register(NoteCell.self, forCellReuseIdentifier:
-                            NoteCell.reuseIdentifier)
-        view.addSubview(tableView)
+        tableView.register(NoteCell.self, forCellReuseIdentifier: NoteCell.reuseIdentifier)
+        tableView.register(AddNoteCell.self, forCellReuseIdentifier: AddNoteCell.reuseIdentifier)
         tableView.backgroundColor = .clear
         tableView.keyboardDismissMode = .onDrag
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
-        tableView.pin(to: self.view)
+        
+        tableView.pin(to: self.view, [.top], 15)
     }
     
     private func setupNavBar() {
         self.title = "Notes"
         
-        //let closeButton = UIButton(type: .close)
-        //closeButton.addTarget(self, action: #selector(dismissViewController(_:)), for: .touchUpInside)
-        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeButton)
+        let closeButton = UIButton(type: .close)
+        closeButton.addTarget(self, action: #selector(dismissNotesController), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: closeButton)
+    }
+    
+    @objc
+    private func dismissNotesController() {
+        dismiss(animated: true, completion: nil)
     }
     
     private func handleDelete(indexPath: IndexPath) {
@@ -85,14 +91,14 @@ extension NotesViewController: UITableViewDataSource {
 
 extension NotesViewController: UITableViewDelegate { }
  
-extension NotesViewController: AddNoteDelegate {
-    func newNoteAdded(note: ShortNote) {
+extension NotesViewController: NotesStackProtocol {
+    func addNewNote(note: ShortNote) {
         dataSource.insert(note, at: 0)
         tableView.reloadData()
     }
 }
 
-/*extension NotesViewController: UITableViewDelegate {
+extension NotesViewController {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
                    indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(
@@ -109,4 +115,4 @@ extension NotesViewController: AddNoteDelegate {
         deleteAction.backgroundColor = .red
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
-}*/
+}

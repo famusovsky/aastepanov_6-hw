@@ -12,8 +12,10 @@ class ViewController: UIViewController, ObserverProtocol {
     private let commentLabel = UILabel()
     private let valueLabel = UILabel()
     private let incrementButton = UIButton(type: .system)
+    private let notesViewController = NotesViewController()
     private var buttonsSV = UIStackView()
     private var value: Int = 0
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,6 +152,7 @@ class ViewController: UIViewController, ObserverProtocol {
     
     @objc
     private func notesButtonPressed() {
+        self.present(notesViewController, animated: true, completion: nil)
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }
