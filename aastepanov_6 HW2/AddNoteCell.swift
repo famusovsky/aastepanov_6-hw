@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AddNoteCell: UITableViewCell {
+final class AddNoteCell: UITableViewCell, UITextViewDelegate {
     static let reuseIdentifier = "AddNoteCell"
     public var delegate: NotesStackProtocol?
     private var textView = UITextView()
@@ -33,7 +33,9 @@ final class AddNoteCell: UITableViewCell {
     private func setupView() {
         textView.font = .systemFont(ofSize: 14, weight: .regular)
         textView.textColor = .tertiaryLabel
+        textView.text = "You can write your note here:"
         textView.backgroundColor = .clear
+        textView.delegate = self
         textView.setHeight(140)
         
         addButton.setTitle("Add new note", for: .normal)
@@ -58,9 +60,23 @@ final class AddNoteCell: UITableViewCell {
     
     @objc
     private func addButtonTapped(_ sender: UIButton) {
-        if (!textView.text.isEmpty) {
+        if textView.textColor != .tertiaryLabel && textView.text != "" {
             delegate?.addNewNote(note: ShortNote(text: textView.text))
             textView.text = ""
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == .tertiaryLabel {
+            textView.text = ""
+            textView.textColor = .black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.textColor = .tertiaryLabel
+            textView.text = "You can write your note here:"
         }
     }
 }

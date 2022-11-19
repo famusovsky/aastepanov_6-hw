@@ -35,7 +35,15 @@ final class NotesViewController: UIViewController {
         tableView.delegate = self
         view.addSubview(tableView)
         
-        tableView.pin(to: self.view, [.top], 15)
+        let notesData = UserDefaults.standard.data(forKey: "Notes") ?? Data()
+        if (!notesData.isEmpty) {
+            let notes: [ShortNote] = try! JSONDecoder().decode([ShortNote].self, from: notesData)
+            if (!notes.isEmpty) {
+                dataSource = notes
+            }
+        }
+        
+        tableView.pin(to: self.view)
     }
     
     private func setupNavBar() {
@@ -49,11 +57,6 @@ final class NotesViewController: UIViewController {
     @objc
     private func dismissNotesController() {
         dismiss(animated: true, completion: nil)
-    }
-    
-    private func handleDelete(indexPath: IndexPath) {
-        dataSource.remove(at: indexPath.row)
-        tableView.reloadData()
     }
 }
 
@@ -94,6 +97,19 @@ extension NotesViewController: UITableViewDelegate { }
 extension NotesViewController: NotesStackProtocol {
     func addNewNote(note: ShortNote) {
         dataSource.insert(note, at: 0)
+        
+        let notesData = try? JSONEncoder().encode(dataSource)
+        UserDefaults.standard.set(notesData, forKey: "Notes")
+        
+        tableView.reloadData()
+    }
+    
+    private func handleDelete(indexPath: IndexPath) {
+        dataSource.remove(at: indexPath.row)
+        
+        let notesData = try? JSONEncoder().encode(dataSource)
+        UserDefaults.standard.set(notesData, forKey: "Notes")
+        
         tableView.reloadData()
     }
 }
