@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F03149628ED8830000A34CC /* aastepanov_6 HW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aastepanov_6 HW2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F03149628ED8830000A34CC /* aastepanov_6 HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aastepanov_6 HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F03149928ED8830000A34CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F03149B28ED8830000A34CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F03149D28ED8830000A34CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		3F03148D28ED8830000A34CC = {
 			isa = PBXGroup;
 			children = (
-				3F03149828ED8830000A34CC /* aastepanov_6 HW2 */,
+				3F03149828ED8830000A34CC /* aastepanov_6 HW */,
 				3F03149728ED8830000A34CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		3F03149728ED8830000A34CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F03149628ED8830000A34CC /* aastepanov_6 HW2.app */,
+				3F03149628ED8830000A34CC /* aastepanov_6 HW.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F03149828ED8830000A34CC /* aastepanov_6 HW2 */ = {
+		3F03149828ED8830000A34CC /* aastepanov_6 HW */ = {
 			isa = PBXGroup;
 			children = (
 				3F03149928ED8830000A34CC /* AppDelegate.swift */,
@@ -79,15 +79,15 @@
 				3F72C4BE2923FAC400C33B8A /* NotesViewController.swift */,
 				3F72C4C02923FD1A00C33B8A /* AddNoteCell.swift */,
 			);
-			path = "aastepanov_6 HW2";
+			path = "aastepanov_6 HW";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F03149528ED8830000A34CC /* aastepanov_6 HW2 */ = {
+		3F03149528ED8830000A34CC /* aastepanov_6 HW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F0314AA28ED8831000A34CC /* Build configuration list for PBXNativeTarget "aastepanov_6 HW2" */;
+			buildConfigurationList = 3F0314AA28ED8831000A34CC /* Build configuration list for PBXNativeTarget "aastepanov_6 HW" */;
 			buildPhases = (
 				3F03149228ED8830000A34CC /* Sources */,
 				3F03149328ED8830000A34CC /* Frameworks */,
@@ -97,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = "aastepanov_6 HW2";
-			productName = "aastepanov_6 HW2";
-			productReference = 3F03149628ED8830000A34CC /* aastepanov_6 HW2.app */;
+			name = "aastepanov_6 HW";
+			productName = "aastepanov_6 HW";
+			productReference = 3F03149628ED8830000A34CC /* aastepanov_6 HW.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F03149128ED8830000A34CC /* Build configuration list for PBXProject "aastepanov_6 HW2" */;
+			buildConfigurationList = 3F03149128ED8830000A34CC /* Build configuration list for PBXProject "aastepanov_6 HW" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F03149528ED8830000A34CC /* aastepanov_6 HW2 */,
+				3F03149528ED8830000A34CC /* aastepanov_6 HW */,
 			);
 		};
 /* End PBXProject section */
@@ -289,7 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "aastepanov_6 HW2/Info.plist";
+				INFOPLIST_FILE = "aastepanov_6 HW/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +299,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.aastepanov-6-HW2";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.aastepanov-6-HW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "aastepanov_6 HW2/Info.plist";
+				INFOPLIST_FILE = "aastepanov_6 HW/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -325,7 +325,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.aastepanov-6-HW2";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.aastepanov-6-HW";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -336,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F03149128ED8830000A34CC /* Build configuration list for PBXProject "aastepanov_6 HW2" */ = {
+		3F03149128ED8830000A34CC /* Build configuration list for PBXProject "aastepanov_6 HW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F0314A828ED8831000A34CC /* Debug */,
@@ -345,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F0314AA28ED8831000A34CC /* Build configuration list for PBXNativeTarget "aastepanov_6 HW2" */ = {
+		3F0314AA28ED8831000A34CC /* Build configuration list for PBXNativeTarget "aastepanov_6 HW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F0314AB28ED8831000A34CC /* Debug */,

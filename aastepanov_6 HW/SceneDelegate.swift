@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  aastepanov_6 HW2
+//  aastepanov_6 HW
 //
 //  Created by Алексей Степанов on 2022-10-05.
 //
